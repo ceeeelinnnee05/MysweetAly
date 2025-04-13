@@ -135,3 +135,9 @@ function BirthdayGiftCustomizer() {
 }
 
 export default BirthdayGiftCustomizer;
+return (
+  <div className="birthday-gift-customizer"> {/* This matches the CSS class */}
+    <h1>Birthday Gift Customizer</h1>
+    <p>Add your birthday message here!</p>
+  </div>
+);
