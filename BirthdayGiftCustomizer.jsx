@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./BirthdayGiftCustomizer.css"; // Import the CSS file
 
 function BirthdayGiftCustomizer() {
   const [message, setMessage] = useState("Happy Birthday!");
@@ -10,7 +11,7 @@ function BirthdayGiftCustomizer() {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
-      if (file.size > 10 * 1024 * 1024) { // Limit size to 10MB
+      if (file.size > 10 * 1024 * 1024) {
         alert("Image size should not exceed 10MB.");
         return;
       }
@@ -26,7 +27,7 @@ function BirthdayGiftCustomizer() {
   const handleMusicUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
-      if (file.size > 15 * 1024 * 1024) { // Limit size to 15MB
+      if (file.size > 15 * 1024 * 1024) {
         alert("Music file size should not exceed 15MB.");
         return;
       }
@@ -39,7 +40,7 @@ function BirthdayGiftCustomizer() {
   const handleVideoUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
-      if (file.size > 50 * 1024 * 1024) { // Limit size to 50MB
+      if (file.size > 50 * 1024 * 1024) {
         alert("Video file size should not exceed 50MB.");
         return;
       }
@@ -66,7 +67,7 @@ function BirthdayGiftCustomizer() {
       <h1>Birthday Gift Customizer</h1>
 
       {/* Message Input */}
-      <label>
+      <label className="input-label">
         Enter a custom message:
         <input
           type="text"
@@ -76,55 +77,53 @@ function BirthdayGiftCustomizer() {
           aria-label="Enter your custom birthday message"
         />
       </label>
-      <br />
 
       {/* Image Upload */}
-      <label>
+      <label className="input-label">
         Upload an image:
-        <input 
-          type="file" 
-          accept="image/*" 
-          onChange={handleImageUpload} 
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleImageUpload}
           aria-label="Upload an image file"
         />
       </label>
-      <br />
 
       {/* Music Upload */}
-      <label>
+      <label className="input-label">
         Upload background music:
-        <input 
-          type="file" 
-          accept="audio/*" 
-          onChange={handleMusicUpload} 
+        <input
+          type="file"
+          accept="audio/*"
+          onChange={handleMusicUpload}
           aria-label="Upload an audio file"
         />
       </label>
-      <br />
 
       {/* Video Upload */}
-      <label>
+      <label className="input-label">
         Upload a short video:
-        <input 
-          type="file" 
-          accept="video/*" 
-          onChange={handleVideoUpload} 
+        <input
+          type="file"
+          accept="video/*"
+          onChange={handleVideoUpload}
           aria-label="Upload a video file"
         />
       </label>
+
       <div className="preview">
         {/* Preview Section */}
         <h2>Preview</h2>
         <p>{message}</p>
-        {image && <img src={image} alt="Uploaded" style={{ maxWidth: "300px", marginTop: "10px" }} />}
+        {image && <img src={image} alt="Uploaded" className="preview-image" />}
         {music && (
-          <audio controls style={{ marginTop: "10px" }}>
+          <audio controls className="preview-audio">
             <source src={music} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         )}
         {video && (
-          <video controls style={{ maxWidth: "500px", marginTop: "10px" }}>
+          <video controls className="preview-video">
             <source src={video} type="video/mp4" />
             Your browser does not support the video element.
           </video>
