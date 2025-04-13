@@ -1,0 +1,83 @@
+/* Styling for the BirthdayGiftCustomizer Component */
+.birthday-gift-customizer {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input labels */
+.input-label {
+  display: block;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.input-label input {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Preview Section */
+.preview {
+  margin-top: 20px;
+}
+
+.preview h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.preview p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Preview Media Styles */
+.preview-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.preview-audio,
+.preview-video {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .birthday-gift-customizer {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .input-label input {
+    font-size: 14px;
+  }
+
+  .preview h2 {
+    font-size: 18px;
+  }
+
+  .preview p {
+    font-size: 14px;
+  }
+
+  .preview-audio,
+  .preview-video {
+    width: 100%;
+  }
+}
