@@ -1,3 +1,4 @@
+import './BirthdayGiftCustomizer.css';
 import React, { useState, useEffect } from "react";
 import "./BirthdayGiftCustomizer.css"; // Import the CSS file
 
